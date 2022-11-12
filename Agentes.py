@@ -1,7 +1,14 @@
 import mesa
 import matplotlib.pyplot as plt
  
-     
+def compute_gini(model):
+        counter = 0
+        for agent in model.schedule.agents:
+           # print(agent.type)
+            if agent.type ==3: 
+                counter = counter + 1
+                print("Contador:",counter)
+        return counter       
     
     
 class Basura(mesa.Agent):

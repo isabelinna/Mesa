@@ -34,10 +34,15 @@ class CleanerBot(mesa.Model):
                 self.grid.place_agent(a, (x, y))
                 
 
-        self.datacollector = mesa.DataCollector({
-            "Basura": lambda m: self.compute_gini(m,3) 
-        }          
+        self.datacollector = mesa.DataCollector(
+            model_reporters={"Basura recogida": compute_gini} 
+                  
         )
+
+        #  self.datacollector = mesa.DataCollector({
+        #    "Basura": lambda m: self.compute_gini(m,3) 
+        #}          
+        #)
 
     def step(self):
         
@@ -49,15 +54,14 @@ class CleanerBot(mesa.Model):
             
             self.running = False
     
-    @staticmethod
-    def compute_gini(model,tipo):
-        counter = 0
-        for agent in model.schedule.agents:
+    #def compute_gini(model,tipo):
+     #   counter = 0
+      #  for agent in model.schedule.agents:
            # print(agent.type)
-            if agent.type ==tipo: 
-                counter = counter + 1
-                print("Contador:",counter)
-        return counter  
+       #     if agent.type ==tipo: 
+        #        counter = counter + 1
+         #       print("Contador:",counter)
+        #return counter  
             
 
            
