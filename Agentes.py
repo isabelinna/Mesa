@@ -1,7 +1,7 @@
 import mesa
 import matplotlib.pyplot as plt
  
-def compute_gini(model):
+def compute_bot(model):
         counter = 0
         for agent in model.schedule.agents:
            # print(agent.type)
