@@ -5,24 +5,24 @@ from mesa.visualization.UserParam import UserSettableParameter
 parametros = {
     "agentes": UserSettableParameter(
         "slider",
-        "Number of agents",
+        "Número de agentes",
         5,     # Default
         1,      #Min
         100,    #Max
         1,       #Step
-        description="Cuantos Bots spawnean",
+        description="Cuantos Bots desea",
     ), "N": 10, "M": 10,
 
     "tiempoMax": UserSettableParameter(
         "number",
-        "Max steps",
+        "Steps máximos",
         value=100,
-        description="Choose how many steps you want",
+        description="Cuántos steps se ejecutarán",
     ),
 
     "porcentaje": UserSettableParameter(
         "slider",
-        "Floor Covered in dirt",
+        "Porcentaje de basura",
         15,        # Default
         1,        #Min
         90,          #Max
